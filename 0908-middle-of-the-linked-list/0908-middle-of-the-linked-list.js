@@ -17,14 +17,14 @@ var middleNode = function (head) {
         temp = temp.next;
         length++
     }
-    console.log(length, '----------length')
+    // console.log(length, '----------length')
     let half = -Math.round(-(length / 2))
-    console.log(half, '----------half')
+    // console.log(half, '----------half')
     let i = 0;
     temp = head;
     while (i < half) {
         temp = temp.next;
-        console.log(temp, '------------temp')
+        // console.log(temp, '------------temp')
         i++
     }
     return temp;
