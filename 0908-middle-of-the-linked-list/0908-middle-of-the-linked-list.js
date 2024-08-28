@@ -18,11 +18,11 @@ var middleNode = function (head) {
         length++
     }
     let half = -Math.round(-(length / 2))
-    length = 0;
+    let i = 0;
     temp = head;
-    while (length < half) {
+    while (i < half) {
         temp = temp.next;
-        length++
+        i++
     }
     return temp;
 };
