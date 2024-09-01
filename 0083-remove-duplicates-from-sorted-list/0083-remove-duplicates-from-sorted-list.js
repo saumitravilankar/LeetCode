@@ -22,7 +22,5 @@ var deleteDuplicates = function (head) {
         }
         head = head.next;
     }
-    // for (const item of mySet) {
-    // }
     return result.next;
 };
