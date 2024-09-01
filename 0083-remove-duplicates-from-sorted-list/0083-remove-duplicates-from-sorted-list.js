@@ -10,19 +10,19 @@
  * @return {ListNode}
  */
 var deleteDuplicates = function (head) {
+    let result = new ListNode(0)
+    let result_curr = result;
     const mySet = new Set();
-    while (head) {
+    while (head !== null) {
         if (!mySet.has(head.val)) {
             mySet.add(head.val);
+            const node = new ListNode(head.val)
+            result_curr.next = node;
+            result_curr = result_curr.next;
         }
         head = head.next;
     }
-    let result = new ListNode(0)
-    let result_curr = result;
-    for (const item of mySet) {
-        const node = new ListNode(item)
-        result_curr.next = node;
-        result_curr = result_curr.next;
-    }
+    // for (const item of mySet) {
+    // }
     return result.next;
 };
